@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
+</head>
+<body>
+  <a-scene mindar-image="imageTargetSrc: https://github.com/silent-psycho/my-ar-gift/blob/main/targets%20(1).mind; filterMinCF:0.001; filterBeta:0.01" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+    <a-assets>
+      <video id="myvideo" autoplay loop="true" src="https://github.com/silent-psycho/my-ar-gift/blob/main/The_Destroyer_of_worlds_Oppenheimer_edit_l_Lady_Gaga_bloody_m.mp4"></video> <!-- Replace with your video link, e.g., https://raw.githubusercontent.com/yourusername/my-ar-gift/main/myvideo.mp4 -->
+    </a-assets>
+    <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+    <a-entity mindar-image-target="targetIndex: 0">
+      <a-video src="#myvideo" position="0 0 0" scale="1 1 1" rotation="-90 0 0" width="1" height="0.5625"></a-video> <!-- Adjust scale/position if needed for fit -->
+    </a-entity>
+  </a-scene>
+</body>
+</html>
